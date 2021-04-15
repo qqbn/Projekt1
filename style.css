@@ -1,0 +1,202 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+body{
+    font-family: 'Alfa Slab One', cursive;
+    background: url('smoke.jpg');
+    color: white;
+    height: 100vh;
+}
+
+.topper{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    background: black;
+    text-align: center;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+
+}
+
+.topper h1{
+    text-align: center;
+    color: #ececec;
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px #c1a57b;
+    
+}
+
+.main{
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main img{
+    height: 50vh;
+    opacity: 0.5;
+    animation-name: example;
+    animation-duration: 8s;
+    
+}
+
+@keyframes example{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0,75;
+    }
+}
+
+.text{
+    display: block;
+    justify-content: space-around;
+    letter-spacing: 5px;
+    text-decoration: none;
+    width: 30%;
+    pointer-events: none;
+    animation-name: example2;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes example2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.text h1{
+    text-align: center;
+    color: #ececec;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-decoration: underline #c1a57b;
+}
+
+.info{
+    font-size: 20px;
+}
+
+.albums{
+    background: radial-gradient(#525252, #131313);
+    min-height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+        background: white;
+        margin: 0rem 5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        height: 60vh;
+        color: black;
+        width: 50vh;
+        box-shadow: 0px 7px 7px black;
+}
+.box p{
+    margin-top: 30px;
+    padding: 2rem;
+}
+.box img{
+    object-fit: contain;
+    height: 30vh;
+    width: auto;
+    border: 3px solid #c1a57b;
+    background: #c1a57b;
+}
+
+.paragraph{
+    opacity: 1;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out
+}
+
+.footer{
+    background: url("smoke.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer h1{
+    font-size: 40px;
+    margin-top: 3rem;
+    letter-spacing: 10px;
+    text-decoration: underline #c1a57b;
+}
+.ending{
+    margin: 2rem;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+
+}
+.woo{
+    margin: 2rem;
+    font-size: 20px;
+    text-align: center;
+    color: #c1a57b;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-shadow: 5px 5px white;
+
+}
+.intro{
+    height: 60vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+
+.intro-appear{
+    opacity: 0.5;
+    transform: translateY(0px);
+}
+
+.intro-appear2{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@media screen and(max-width: 1090px){
+    .box{
+        height: 30vh;
+        width: 60vh;
+    }
+
+    .box img{
+        height: 40vh;
+    }
+
+    .paragraph{
+        font-size: 10px;
+    }
+}
